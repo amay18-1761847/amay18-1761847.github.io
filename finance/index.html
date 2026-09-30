@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ledgerly — Personal Finance</title>
+  <meta name="description" content="Private, local-first personal finance: accounts, transactions, budgets, cash flow, net worth, recurring bills, goals and investments.">
+  <meta name="theme-color" content="#fcfcfb">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23eb6834'/><path d='M9 22V10h3v9h7v3z' fill='white'/></svg>">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/dashboard"><span class="brand-mark" aria-hidden="true">L</span><span>Ledgerly</span></a>
+      <nav id="nav" aria-label="Main">
+        <a href="#/dashboard" data-route="dashboard"><span aria-hidden="true">🏠</span>Dashboard</a>
+        <a href="#/accounts" data-route="accounts"><span aria-hidden="true">🏦</span>Accounts</a>
+        <a href="#/transactions" data-route="transactions"><span aria-hidden="true">🧾</span>Transactions</a>
+        <a href="#/cashflow" data-route="cashflow"><span aria-hidden="true">📊</span>Cash flow</a>
+        <a href="#/reports" data-route="reports"><span aria-hidden="true">📈</span>Reports</a>
+        <a href="#/budget" data-route="budget"><span aria-hidden="true">🎯</span>Budget</a>
+        <a href="#/recurring" data-route="recurring"><span aria-hidden="true">🔁</span>Recurring</a>
+        <a href="#/goals" data-route="goals"><span aria-hidden="true">🏁</span>Goals</a>
+        <a href="#/investments" data-route="investments"><span aria-hidden="true">💹</span>Investments</a>
+        <a href="#/settings" data-route="settings"><span aria-hidden="true">⚙️</span>Settings</a>
+      </nav>
+      <div class="sidebar-foot">
+        <button class="btn ghost small" id="theme-toggle" type="button" aria-label="Toggle dark mode">🌓 Theme</button>
+        <p class="muted tiny">Data stays in this browser.<br>Back it up in Settings.</p>
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-controls="sidebar">☰</button>
+        <h1 id="page-title">Dashboard</h1>
+        <div class="topbar-actions" id="page-actions"></div>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="toasts" aria-live="polite"></div>
+  <noscript>Ledgerly needs JavaScript enabled.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
